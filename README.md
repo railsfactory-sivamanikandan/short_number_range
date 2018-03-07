@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+ require 'short_number_range'
+ include ShortNumberRange
+
+ "1,2,3,4,5,7,9,10".convert_range # "1 - 5, 7, 9 - 10"
+ "1,2,3,4,5,7,9,10".convert_range({short_string: 'to'}) # "1 to 5, 7, 9 to 10"
+ "1-2-3-4-5-7-9-10".convert_range({short_string: 'to', delimiter: '-'}) # "1 to 5, 7, 9 to 10"
+```
 
 ## Development
 
